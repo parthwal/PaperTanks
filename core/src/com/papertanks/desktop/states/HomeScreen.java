@@ -28,7 +28,7 @@ public class HomeScreen extends State {
             if(new_Game.contains(Gdx.input.getX() , PaperTanks.HEIGHT-Gdx.input.getY()))
             {
                 gsm.select.play(0.1f);
-                gsm.set(new LoadGame(gsm));
+                gsm.set(new HomeScreen(gsm));
             }
             if(load_Game.contains(Gdx.input.getX() , Gdx.input.getY()))
             {
