@@ -14,7 +14,7 @@ public class gameScreen extends State{
     protected gameScreen(GameStateManager gsm) {
         super(gsm);
         gameScreen_bg = new Texture("paperTanks_assets/gameScreen.png");
-        pause= new Rectangle(0,0,gameScreen_bg.getWidth(),gameScreen_bg.getHeight());
+        pause= new Rectangle(617,599,46,65);
     }
 
     @Override

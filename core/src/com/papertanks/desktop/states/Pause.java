@@ -18,9 +18,9 @@ public class Pause extends State {
         super(gsm);
         pause_bg = new Texture("paperTanks_assets/pause.png");
         resume= new Rectangle(371,384,567,95);
-        mainMenu= new Rectangle(371,269,567,95);
-        exit= new Rectangle(371,157,271,95);
-        replay= new Rectangle(673,157,71,95);
+        replay= new Rectangle(371,269,567,95);
+        mainMenu= new Rectangle(371,157,271,95);
+        exit= new Rectangle(673,157,71,95);
     }
 
     @Override
@@ -36,7 +36,7 @@ public class Pause extends State {
                 Gdx.app.exit();
             }
             if(replay.contains(Gdx.input.getX(), PaperTanks.HEIGHT-Gdx.input.getY())){
-                gsm.set(new gameScreen(gsm));
+                gsm.set(new SelectOne(gsm));
             }
         }
     }
