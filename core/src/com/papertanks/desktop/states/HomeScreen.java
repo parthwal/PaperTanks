@@ -13,6 +13,8 @@ public class HomeScreen extends State {
     private Texture buttons_Home;
     private Rectangle new_Game;
     private Rectangle load_Game;
+    private Rectangle exit_Game;
+
 
     public HomeScreen(GameStateManager gsm){
         super(gsm);
@@ -20,6 +22,7 @@ public class HomeScreen extends State {
         buttons_Home=new Texture("paperTanks_assets/homeScreen_buttons.png");
         new_Game = new Rectangle(PaperTanks.WIDTH*4/7,PaperTanks.HEIGHT*2/7, buttons_Home.getWidth(), buttons_Home.getHeight()*3/8);
         load_Game = new Rectangle(PaperTanks.WIDTH*4/7,PaperTanks.HEIGHT*2/7, buttons_Home.getWidth(), buttons_Home.getHeight()*3/8);
+        exit_Game = new Rectangle(1059,609, 174, 66);
     }
     @Override
     public void handleInput() {
@@ -34,6 +37,11 @@ public class HomeScreen extends State {
             {
                 gsm.select.play(0.1f);
                 gsm.set(new SelectOne(gsm));
+            }
+            if (exit_Game.contains(Gdx.input.getX(), PaperTanks.HEIGHT-Gdx.input.getY()))
+            {
+                gsm.select.play(0.1f);
+                Gdx.app.exit();
             }
         }
     }

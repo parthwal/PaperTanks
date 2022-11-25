@@ -13,12 +13,12 @@ public class Pause extends State {
     private Rectangle resume;
     private Rectangle mainMenu;
     private Rectangle exit;
-    private Rectangle replay;
+    private Rectangle save_game;
     public Pause(GameStateManager gsm) {
         super(gsm);
         pause_bg = new Texture("paperTanks_assets/pause.png");
         resume= new Rectangle(371,384,567,95);
-        replay= new Rectangle(371,269,567,95);
+        save_game= new Rectangle(371,269,567,95);
         mainMenu= new Rectangle(371,157,271,95);
         exit= new Rectangle(673,157,71,95);
     }
@@ -35,7 +35,7 @@ public class Pause extends State {
             if(exit.contains(Gdx.input.getX(), PaperTanks.HEIGHT-Gdx.input.getY())){
                 Gdx.app.exit();
             }
-            if(replay.contains(Gdx.input.getX(), PaperTanks.HEIGHT-Gdx.input.getY())){
+            if(save_game.contains(Gdx.input.getX(), PaperTanks.HEIGHT-Gdx.input.getY())){
                 gsm.set(new SelectOne(gsm));
             }
         }
