@@ -28,15 +28,15 @@ public class SelectTwo extends State{
     if(Gdx.input.justTouched()){
         if(tank1.contains(Gdx.input.getX() , PaperTanks.HEIGHT-Gdx.input.getY())){
             gsm.select.play(0.1f);
-            gsm.set(new Loading(gsm));
+            gsm.set(new gameScreen(gsm));
         }
         else if(tank2.contains(Gdx.input.getX() , PaperTanks.HEIGHT-Gdx.input.getY())){
             gsm.select.play(0.1f);
-            gsm.set(new Loading(gsm));
+            gsm.set(new gameScreen(gsm));
         }
         else if(tank3.contains(Gdx.input.getX() , PaperTanks.HEIGHT-Gdx.input.getY())){
             gsm.select.play(0.1f);
-            gsm.set(new Loading(gsm));
+            gsm.set(new gameScreen(gsm));
         }
     }
     }
